@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="370.0" style="-fx-background-color: #1a1515;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MusicPlayerController">
+   <children>
+      <ImageView fx:id="coverImage" fitHeight="257.0" fitWidth="264.0" layoutX="53.0" layoutY="30.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../../../../Pictures/Screenshots/Screenshot%202026-11-04%20195723.png" />
+         </image>
+      </ImageView>
+      <Line endX="64.29998016357422" endY="332.9999694824219" layoutX="-61.0" layoutY="138.0" startX="64.29998016357422" startY="-138.0" strokeMiterLimit="20.0" style="-fx-stroke-width: 10;">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.08077972382307053" green="0.5894736647605896" blue="0.1486055850982666" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.016374269500374794" green="0.21052631735801697" blue="0.051968809217214584" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Line endX="68.99996948242188" endY="-138.47108459472656" layoutX="299.0" layoutY="139.0" startX="68.99996948242188" startY="337.0" strokeMiterLimit="20.0" style="-fx-stroke-width: 10;">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.2613636309450323">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.15781676769256592" green="0.23157894611358643" blue="0.1676517277956009" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.031578946858644485" green="0.4736842215061188" blue="0.07578947395086288" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Line endX="339.92889404296875" endY="-148.0" layoutX="20.0" layoutY="151.0" startX="-9.700017929077148" startY="-148.0" strokeMiterLimit="20.0" style="-fx-stroke-width: 10;">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.08077972382307053" green="0.5894736647605896" blue="0.1486055850982666" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.016374269500374794" green="0.21052631735801697" blue="0.051968809217214584" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Line endX="333.92889404296875" endY="-148.00003051757812" layoutX="26.0" layoutY="626.0" startX="-19.999975204467773" startY="-148.0" strokeMiterLimit="20.0" style="-fx-stroke-width: 10;">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.08795321732759476" green="0.16842105984687805" blue="0.09868226200342178" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.035867445170879364" green="0.4842105209827423" blue="0.11059129238128662" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Button layoutX="229.0" layoutY="360.0" mnemonicParsing="false" onAction="#onNext" prefHeight="66.0" prefWidth="70.0" style="-fx-background-radius: 1000; -fx-background-color: #013d0f;" text="&gt;" textFill="#000000f7">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="playPauseButton" layoutX="149.0" layoutY="361.0" mnemonicParsing="false" onAction="#onPlayPause" prefHeight="66.0" prefWidth="70.0" style="-fx-background-radius: 1000; -fx-background-color: #013d0f;" text="| |" textFill="#000000f7">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Button>
+      <Button layoutX="68.0" layoutY="360.0" mnemonicParsing="false" onAction="#onPrevious" prefHeight="66.0" prefWidth="70.0" style="-fx-background-radius: 1000; -fx-background-color: #013d0f;" text="&lt;" textFill="#000000f7">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Button>
+      <ProgressBar fx:id="progressBar" layoutX="65.0" layoutY="334.0" prefHeight="10.0" prefWidth="238.0" progress="0.0" />
+      <Label fx:id="songLabel" alignment="CENTER" layoutX="50.0" layoutY="291.0" prefHeight="18.0" prefWidth="264.0" text="" textFill="#d8b4fe">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="artistLabel" alignment="CENTER" layoutX="50.0" layoutY="311.0" prefHeight="16.0" prefWidth="264.0" text="" textFill="#9ca3af">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="17.0" layoutY="376.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="44.0" style="-fx-background-radius: 1000; -fx-background-color: #013d0f;" text="back" textFill="#151515">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="likeButton" layoutX="308.0" layoutY="376.0" mnemonicParsing="false" onAction="#onLike" prefHeight="41.0" prefWidth="44.0" style="-fx-background-radius: 1000; -fx-background-color: #013d0f; -fx-font-size: 18px;" text="♡" textFill="#e5e7eb" />
+      <Label layoutX="50.0" layoutY="448.0" text="VOL" textFill="#d8b4fe">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <Slider fx:id="volumeSlider" layoutX="81.0" layoutY="448.0" prefHeight="14.0" prefWidth="200.0" style="-fx-control-inner-background: #013d0f;" value="70.0" />
+      <Label fx:id="volumeLabel" alignment="CENTER" layoutX="288.0" layoutY="446.0" prefHeight="16.0" prefWidth="38.0" text="70%" textFill="#d8b4fe">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

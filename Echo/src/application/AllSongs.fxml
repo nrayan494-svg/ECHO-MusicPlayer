@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="480.0" prefWidth="370.0" style="-fx-background-color: #100b18;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AllSongsController">
+
+    <top>
+        <VBox alignment="CENTER" prefHeight="202.0" prefWidth="370.0" spacing="10" style="-fx-padding: 20;">
+
+            <Label prefHeight="0.0" prefWidth="151.0" style="-fx-text-fill: #d8b4fe; -fx-font-size: 28px; -fx-font-weight: bold;" text="ALL SONGS" />
+
+            <!-- Search Button and TextField -->
+            <HBox alignment="CENTER" maxWidth="Infinity" prefHeight="40.0" prefWidth="284.0" spacing="5.0">
+
+                <Button minWidth="1.0" mnemonicParsing="false" onAction="#SearchAlgorithm" prefHeight="26.0" prefWidth="116.0" style="-fx-background-color: #382245;" text="Search" textFill="#f7f7f7">
+
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+
+                <TextField fx:id="SearchField" prefHeight="26.0" prefWidth="226.0" style="-fx-background-color: #f2a5e1;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+
+            </HBox>
+
+            <!-- ComboBox -->
+            <ComboBox fx:id="dropDown" prefHeight="26.0" prefWidth="228.0" style="-fx-background-color: #f2a5e1; -fx-text-fill: white;" />
+
+            <!-- Sort and Back Buttons -->
+            <HBox alignment="CENTER" maxWidth="Infinity" prefHeight="50.0" spacing="20.0">
+
+                <Button mnemonicParsing="false" onAction="#SortSongs" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #382245;" text="Sort ( A-Z )" textFill="WHITE">
+
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+
+                <Button mnemonicParsing="false" onAction="#onBack" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: green; -fx-background-radius: 7px;" text="Back">
+
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+
+            </HBox>
+
+        </VBox>
+    </top>
+
+    <center>
+        <ListView fx:id="songsList" style="-fx-background-color: #20152b;" />
+    </center>
+
+</BorderPane>

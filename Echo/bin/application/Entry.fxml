@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EntryController">
+
+    <center>
+        <AnchorPane prefHeight="447.0" prefWidth="359.0">
+
+            <children>
+
+                <!-- Background Image -->
+                <ImageView fx:id="EntryImage" fitHeight="485.0" fitWidth="376.0" layoutX="-1.0" pickOnBounds="true">
+
+                    <image>
+                        <Image url="@../../../../../../Downloads/Vibrant%20album%20artworks%20in%20cinematic%20grid.png" />
+                    </image>
+
+                </ImageView>
+
+                <!-- Purple Play Button -->
+                <ImageView fitHeight="106.0" fitWidth="104.0" layoutX="136.0" layoutY="325.0" onMouseClicked="#switchToChoice" pickOnBounds="true" preserveRatio="true">
+
+                    <image>
+                        <Image url="@../../../../../../Downloads/Purple_Music_Play_Badge-removebg-preview.png" />
+                    </image>
+
+                    <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" height="186.25" radius="94.7525" width="194.76">
+
+                            <color>
+                                <Color red="0.5681" green="0.045" blue="0.8105" opacity="0.83" />
+                            </color>
+
+                            <input>
+                                <Bloom />
+                            </input>
+
+                        </DropShadow>
+                    </effect>
+
+                </ImageView>
+
+                <!-- ECHO Logo Text -->
+                <Label alignment="CENTER" layoutX="9.0" layoutY="98.0" prefHeight="122.0" prefWidth="362.0" text="ECHO">
+
+                    <font>
+                        <Font name="Arial Nova Bold Italic" size="96.0" />
+                    </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.04166664589535102" startX="0.34469695705356035" startY="0.04166668111627752">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7166666388511658" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.07976023107767105" green="0.045730993151664734" blue="0.7263157963752747" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+
+                </Label>
+
+            </children>
+
+        </AnchorPane>
+    </center>
+
+</BorderPane>
